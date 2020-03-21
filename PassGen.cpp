@@ -27,8 +27,8 @@ int main(int argc, char** argv)
     PassGen(count_passwords, count_symvols);
     printf("File \"Passwords.txt\" created!\n\n");
 
-    fout.close();	//закриваємо файл
-    return 0;	//успішне виконання і завершення програми
+    fout.close();	//close file
+    return 0;
 }
 
 void PassGen(int count_p, int count_s)
@@ -38,7 +38,7 @@ void PassGen(int count_p, int count_s)
     {
         for (int j = 0; j < count_s; ++j)
         {
-            rnd = (int)rand() % 86;	//86 - count all symvols in array s[]
+            rnd = (int)rand() % 86;	//86 - count of all symvols in array s[]
             /*cout << s[rnd];*/ fout << s[rnd];
         }
         /*cout << endl;*/ //fout << "\n";
